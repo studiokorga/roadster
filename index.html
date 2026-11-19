@@ -3423,7 +3423,7 @@ document.addEventListener('keydown',e=>{
   document.getElementById('b-ver').textContent='v'+APP_VERSION;
   document.getElementById('brand').innerHTML=brandBlockHTML();
   const lastV = LS.get('fcc.version');
-  if(!LS.get('fcc.seenIntro')){ startTour(); LS.set('fcc.seenIntro','1'); }
+  if(!LS.get('fcc.seenTour')){ startTour(); LS.set('fcc.seenTour','1'); LS.set('fcc.seenIntro','1'); }
   else if(lastV && lastV!==APP_VERSION){ openNews(); }
   LS.set('fcc.version', APP_VERSION);
   // platform-capabilities (optioneel)
